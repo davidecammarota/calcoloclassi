@@ -32,7 +32,7 @@ int bordo_aula_def;
 
 void setup() { // setup valori iniziali  
 
-    Font1 = createFont("Arial-BoldMT", 18);
+    Font1 = createFont("Arial Bold", 18);
     size(1100, 1000);
     //  crea_Shape();         // disegno freccia quote
 
@@ -261,7 +261,7 @@ void disegna_banchi(int x0, int y0, int aulaX, int aulaY, int bancoX, int bancoY
     fill(180);
     for (int i = 0; i < numerofile + 1; i++) { // disegno banchi - attenzione numerofile è pari al numero di file -1! - idem per numerorighe
         for (int ii = 0; ii < numerorighe + 2; ii++) {
-          if ((dist(xs + bordo_aula_def, ys - ii * interasseY, x0 + aulaX / 2 + pos_cattedra, y0 + spazio_insY) > 200) && (dist(x0 + aulaX, y0 + 100 + misure[15] + misure[16]*0.5, xs + bordo_aula_def, ys - ii * interasseY)) > misure[16]*1.2) {
+          if ((dist(xs + bordo_aula_def, ys - ii * interasseY, x0 + aulaX / 2 + pos_cattedra, y0 + spazio_insY) > misure[11]) && (dist(x0 + aulaX, y0 + 100 + misure[15] + misure[16]*0.5, xs + bordo_aula_def, ys - ii * interasseY)) > misure[16]*1.2) {
             rect(xs + bordo_aula_def - (int)(bancoX / 2), ys - ii * interasseY - bancoY, bancoX, bancoY); // bancoX e bancoY
             ellipse(xs + bordo_aula_def, ys - ii * interasseY, 25, 25); // disegno testa alunno
           }
